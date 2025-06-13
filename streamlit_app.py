@@ -68,7 +68,8 @@ section[data-testid="stSidebar"]:hover > div:before {
 # Chargement des données
 @st.cache_data
 def load_data():
-    return pd.read_csv("df_imdb_final.csv")
+    url = "https://raw.githubusercontent.com/Zyeddd/filmrecommandation/main/df_imdb_final.csv"
+    return pd.read_csv(url)
 
 df = load_data()
 
@@ -337,7 +338,7 @@ elif selected == "Le cinéma dans la Creuse":
     col1, col2 = st.columns([1.3, 1.7])  # élargir légèrement la colonne 1 pour l'image
 
     with col1:
-        st.image("evol_repa_ages.png", use_container_width=True)
+        st.image("https://raw.githubusercontent.com/Zyeddd/filmrecommandation/main/evol_repa_ages.png", use_container_width=True)
 
     with col2:
         st.markdown(
